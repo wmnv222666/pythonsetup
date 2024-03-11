@@ -21,7 +21,7 @@ class ProjectManagerSerializer(serializers.ModelSerializer):
         model = ProjectManager
         fields = ("name", "id")
 
-#------------------------------------------------------------------------------------ for print data
+# #------------------------------------------------------------------------------------ for print data
 # print if is't suc   #  Project ， ID  1
 project_instance = Project.objects.get(
     pk=1
