@@ -27,7 +27,7 @@ project_instance = Project.objects.get(
     pk=1
 )  
 project_serializer = ProjectSerializer(instance=project_instance)
-print(project_serializer.data,"aa")
+# print(project_serializer.data,"aa")
 
 
 #  ProjectManagerSerializer  #  ProjectManager instance，ID 1
@@ -35,4 +35,4 @@ project_manager_instance = ProjectManager.objects.get(
     pk=1
 )
 project_manager_serializer = ProjectManagerSerializer(instance=project_manager_instance)
-print(project_manager_serializer.data,"bb")
+# print(project_manager_serializer.data,"bb")

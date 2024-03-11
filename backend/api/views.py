@@ -22,7 +22,9 @@ class ProjectManagerViewset(viewsets.ViewSet):
 
     def list(self, request):
         queryset = ProjectManager.objects.all()
+        # print(queryset, "queryset11")
         serializer = self.serializer_class(queryset, many=True)
+        # print(serializer, "serializer11")
         return Response(serializer.data)
 
 
