@@ -58,7 +58,8 @@ const Create = () => {
   const {handleSubmit, control} = useForm({defaultValues:defaultValues, resolver: yupResolver(schema)})
 
 
-    const submission = (data) => 
+  const submission = (data) => 
+    // console.log(data,"data")
     {
       const StartDate = Dayjs(data.start_date["$d"]).format("YYYY-MM-DD")
       const EndDate = Dayjs(data.end_date["$d"]).format("YYYY-MM-DD")

@@ -46,6 +46,8 @@ class ProjectViewset(viewsets.ViewSet):
         else:
             return Response(serializer.errors, status=400)
 
+
+# When you request a URL like /projects/1/, the retrieve method returns the details of the project with ID 1.
     def retrieve(self, request, pk=None):
         project = self.queryset.get(pk=pk)
         serializer = self.serializer_class(project)
