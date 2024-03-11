@@ -7,8 +7,8 @@ from rest_framework.response import Response
 from .models import *
 
 
-def home(request): 
-    return HttpResponse("This is the homepage")
+# def home(request): 
+#     return HttpResponse("This is the homepage")
 
 class ProjectManagerViewset(viewsets.ViewSet):
     # Allow any user to access the view method, that is, no authentication or authorization is required
@@ -22,7 +22,9 @@ class ProjectManagerViewset(viewsets.ViewSet):
 
     def list(self, request):
         queryset = ProjectManager.objects.all()
+        # print(queryset, "queryset11")
         serializer = self.serializer_class(queryset, many=True)
+        # print(serializer, "serializer11")
         return Response(serializer.data)
 
 
